@@ -19,8 +19,8 @@
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="experience" placeholder="Temperature" required="required" pattern= "^[1-9]\d*(\.\d+)?$" minlength="2" maxlength="10"/>
-        <input type="text" name="test_score" placeholder="Humidity" required="required" pattern= "^[1-9]\d*(\.\d+)?$" minlength="1" maxlength="10" />
-		<input type="text" name="interview_score" placeholder="Pressure" required="required" min="0" max="1" minlength="2" maxlength="10"/>
+        <input type="text" name="test_score" placeholder="Humidity" required="required" min="0" max="1" pattern= "^[0-9]\d*(\.\d+)?$" minlength="1" maxlength="10" />
+		<input type="text" name="interview_score" placeholder="Pressure" required="required" pattern= "^[1-9]\d*(\.\d+)?$" minlength="2" maxlength="10"/>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
